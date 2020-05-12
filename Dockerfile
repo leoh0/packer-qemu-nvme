@@ -24,7 +24,7 @@ RUN go get github.com/hashicorp/packer
 
 WORKDIR $GOPATH/src/github.com/hashicorp/packer
 
-RUN /bin/bash scripts/build.sh
+RUN XC_OS=linux XC_ARCH=amd64 /bin/bash scripts/build.sh
 
 FROM ubuntu:18.04
 
