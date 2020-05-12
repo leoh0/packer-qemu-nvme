@@ -39,4 +39,4 @@ RUN apt update && apt-get install -y \
 COPY --from=qemu /work/qemu-nvme/x86_64-softmmu/qemu-system-x86_64 /usr/bin/qemu-system-nvme-x86_64
 COPY --from=packer /go/bin/packer /usr/bin/packer
 
-ENTRYPOINT ["bin/packer"]
+ENTRYPOINT ["/usr/bin/packer"]
